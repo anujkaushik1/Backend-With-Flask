@@ -4,10 +4,10 @@ app = Flask(__name__)   #Flask class object and gives a name which is unique
 
 @app.route("/firstpage")
 def hello_world():
-    return render_template("first_page.html")
+    return render_template(
+        "jinja_intro.html",name = "Anuj Kaushik", template_name = "Jinja 2"
+        
+        )
 
-@app.route("/secondpage")
-def hello_world_fancy():
-    return render_template("second_page.html")
 
 
