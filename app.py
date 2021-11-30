@@ -3,14 +3,18 @@ from flask import Flask, render_template   #from flask package we have imported 
 app = Flask(__name__)   #Flask class object and gives a name which is unique
 
 
-@app.route("/conditional-basics/")
-def render_data_structures():
-    
-    company = "Apple"
+@app.route("/for-loops/")
+def render_loops_for():
 
-    return render_template("conditional_basics.html", company = company)
+    user_os = {
+        "Bob Smith" : "Windows",
+        "Anne Pun" : "MacOS",
+        "Adam Lee" : "Linux",
+        "Jose Salvatierra" : "Windows"
 
+    }
     
+    return render_template("for-loops.html", user_os = user_os)
  
 
 
